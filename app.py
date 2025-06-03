@@ -3,6 +3,9 @@ import os
 restaurantes=[]
 
 def exibir_nome_do_programa():
+    """
+    Essa função tem o objetivo de mostrar o nome da aplicação.
+    """
     print("""
 ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ─████████████───██████████████─██████─────────██████████─██████──██████─██████████████─████████████████───████████──████████─
@@ -54,6 +57,16 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
+    """
+    Essa função tem o objetivo de casdastrar um novo restaurante.
+
+    Inputs: 
+    - Nome do restaurante.
+    - Categoria do restaurante.    
+
+    OutPuts:
+    - Adiciona um novo restaurante a lista restaurantes.
+    """
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante=input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria_do_restaurante=input('Digite a categoria do seu restaurante: ')
