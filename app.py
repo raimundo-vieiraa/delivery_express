@@ -5,6 +5,9 @@ restaurantes=[]
 def exibir_nome_do_programa():
     """
     Essa função tem o objetivo de mostrar o nome da aplicação.
+
+    OutPuts:
+    - Retorna o nome da aplicação.
     """
     print("""
 ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -36,19 +39,42 @@ def exibir_nome_do_programa():
       """)
 
 def exibir_opçoes_do_programa():
+    """
+    Essa função tem o objetivo de exibir as opções da aplicação.
+    
+    OutPuts:
+    - Retorna as opções da aplicação.
+    """
     print('1. Cadastrar restaurante')
     print('2. Listar restaurante')
     print('3. Ativar ou desativar restaurante')
     print('4. Sair\n')
 
 def finalizar_app():
+    """
+    Essa função tem o objetivo de finalizar a aplicação.
+
+    OutPuts:
+    - Retorna exibir_subtitulo()
+    """
     exibir_subtitulo('Finalizando operação')
 
 def opcao_invalida():
+    """
+    Essa função tem o objetivo de retorna ao menu principal, caso algo de errado na aplicação.
+
+    OutPuts:
+    - Retorna retorne_ao_menu_principal()
+    """
     print('Opção invalida!\n')
     retorne_ao_menu_principal()
 
 def exibir_subtitulo(texto):
+    """Essa função tem o objetivo de exibir o subtitulo de cada função.
+    
+    OutPuts:
+    - Retorna o subtitulo de maneira mais organizada.
+    """
     os.system('cls')
     linha='-'*(len(texto))
     print(linha)
@@ -76,6 +102,12 @@ def cadastrar_novo_restaurante():
     retorne_ao_menu_principal()
 
 def lista_de_restaurantes():
+    """
+    Essa função tem o objetivo de mostrar os restaurantes cadastrados.
+
+    OutPuts:
+    - Retorna o nome do restaurante / categoria / status do restaurante.
+    """
     exibir_subtitulo('Restaurantes Cadastrados')
     print(f'{'Nome: '.ljust(22)} | {'Categoria: '.ljust(21)}| Atividade:')
     for dados_do_restaurante in restaurantes:
@@ -86,6 +118,15 @@ def lista_de_restaurantes():
     retorne_ao_menu_principal()
 
 def alterna_atividade_restaurante():
+    """
+    Essa função tem o objetivo de alterar o status de atividade do restaurante.
+    
+    Inputs:
+    - Alterar o status do restaurante.
+    
+    OutPuts:
+    - Retorna a mudança de status do restaurante.
+    """
     exibir_subtitulo('Alterando estado do restaurante')
     nome_restaurante_ativar=input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado=False
@@ -97,15 +138,31 @@ def alterna_atividade_restaurante():
             print(mensagem)
     if not restaurante_encontrado:
         print('O restaurante não foi encontrado.')
-
-
     retorne_ao_menu_principal()
     
 def retorne_ao_menu_principal():
+    """
+    Essa função tem o objetivo de voltar ao menu principal.
+
+    Inputs:
+    - Digita qualquer tecla para voltar ao menu.
+
+    OutPuts:
+    - Retorna o main()
+    """
     input('\nDigite qualquer tecla para voltar ao menu principal: ')
     main()
 
 def escolher_opcao():
+    """
+    Essa função tem o objetivo de escolher uma opção para continuar.
+
+    Inputs:
+    - Escolher uma opção.
+
+    OutPuts:
+    - Opções que podem ser acessadas: Cadastrar novo restaurante | Mostra lista de restaurantes cadastrados | Ativar ou desativar um restaurante cadastrado | Finalizar a operação.
+    """
     try:
         opcao_escolhida=int(input('Escolha uma opção: '))
         match opcao_escolhida:
@@ -123,6 +180,9 @@ def escolher_opcao():
         opcao_invalida()
 
 def main():
+    """
+    Essa função tem o objetivo de retorna a main principal.
+    """
     os.system ('cls')
     exibir_nome_do_programa()
     exibir_opçoes_do_programa()
