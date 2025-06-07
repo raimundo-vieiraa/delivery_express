@@ -15,3 +15,4 @@ class Restaurante:
 restaurante_praca=Restaurante('Praça','Italiana')
 restaurante_pizza=Restaurante('Pizza Express','Italiana')
 Restaurante.listar_restaurantes()
+print(restaurante_praca)
