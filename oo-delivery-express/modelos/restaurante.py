@@ -1,8 +1,8 @@
 class Restaurante:
     restaurantes=[]
     def __init__(self, nome, categoria):
-        self.nome=nome
-        self.categoria=categoria
+        self.nome=nome.title() #   .title() A primeira letra fica maiuscula.
+        self.categoria=categoria.upper() #   .upper A palavra toda fica maiuscula.
         self._ativo=False
         Restaurante.restaurantes.append(self)
     
