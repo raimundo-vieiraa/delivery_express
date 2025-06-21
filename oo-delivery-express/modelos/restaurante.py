@@ -18,7 +18,7 @@ class Restaurante:
         return '✅'if self._ativo else '❎'
 
     def alternar_estado(self):
-        self._ativo=not self._ativo
+        self._ativo= not self._ativo
 
 restaurante_praca=Restaurante('Praça','Italiana')
 restaurante_praca.alternar_estado()
