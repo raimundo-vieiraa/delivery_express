@@ -1,9 +1,11 @@
+from modelos.avaliacao import Avaliacao
 class Restaurante:
     restaurantes=[]
     def __init__(self, nome, categoria):
         self._nome=nome.title() #   .title() A primeira letra fica maiuscula.
         self._categoria=categoria.upper() #   .upper A palavra toda fica maiuscula.
         self._ativo=False
+        self._avaliacao=[]
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -19,8 +21,15 @@ class Restaurante:
 
     def alternar_estado(self):
         self._ativo= not self._ativo
-
-restaurante_praca=Restaurante('Praça','Italiana')
-restaurante_praca.alternar_estado()
-restaurante_pizza=Restaurante('Pizza Express','Italiana')
-Restaurante.listar_restaurantes()
+    def receber_avaliacao(self,cliente,nota):
+        avaliacao=Avaliacao(cliente,nota)
+        self._avaliacao.append(avaliacao)
+    @property
+    def media_avaliacao(self):
+        if not self._avaliacao:
+            return 0
+        soma_nota=sum(avaliacao._nota for avaliacao in self._avaliacao)
+        print(soma_nota)
+        quantidade_nota=len(self._avaliacao)
+        media=round(quantidade_nota/soma_nota, 1)
+        return media
