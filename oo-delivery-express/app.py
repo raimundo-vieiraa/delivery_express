@@ -1,3 +1,11 @@
+"""
+Arquivo principal que instancia objetos da classe Restaurante,
+executa algumas operações básicas (como receber avaliações e alterar estado)
+e chama a listagem dos restaurantes.
+
+Serve como ponto de entrada para demonstrar o funcionamento do módulo modelos.restaurante.
+"""
+
 from modelos.restaurante import Restaurante
 restaurante_praca=Restaurante('Praça','Goumert')
 restaurante_mexicano=Restaurante('Mexican Food','Mexicana')
