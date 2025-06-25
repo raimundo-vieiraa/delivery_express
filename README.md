@@ -27,7 +27,7 @@ delivery_express/
 git clone https://github.com/seu-usuario/delivery_express.git
 cd delivery_express
 ```
-Repositório no GitHub: [https://github.com/seu-usuario/delivery_express](https://github.com/seu-usuario/delivery_express)
+Repositório no GitHub: [https://github.com/raimundo-vieiraa/delivery_express](https://github.com/raimundo-vieiraa/delivery_express)
 ### 3. Executar a aplicação:
 Como não há dependências externas, bastar rodar o  arquivo principal:
 ```bash
