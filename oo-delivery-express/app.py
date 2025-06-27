@@ -15,6 +15,8 @@ restaurante_japones=Restaurante('Japa','Japonesa')
 
 bebida_suco=Bebida('Suco de Melancia',9.0,'Grande')
 prato_paozinho=Prato('Pãozinho',2.0,'O melhor da região')
+restaurante_praca.add_no_cardapio(bebida_suco)
+restaurante_praca.add_no_cardapio(prato_paozinho)
 restaurante_mexicano.alternar_estado()
 def main():
     print(bebida_suco)

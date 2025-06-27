@@ -8,6 +8,7 @@ Nome
 Além disso, implementa comportamentos úteis tanto para a exibição quanto para a manipulação dos dados dos restaurantes.
 """
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 class Restaurante:
     restaurantes=[]
     def __init__(self, nome, categoria):
@@ -17,11 +18,13 @@ class Restaurante:
         -Categoria
         -Atividade
         -Avaliação
+        -Cardapio
         """
         self._nome=nome.title() #   .title() A primeira letra fica maiuscula.
         self._categoria=categoria.upper() #   .upper A palavra toda fica maiuscula.
         self._ativo=False
         self._avaliacao=[]
+        self._cardapio=[]
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -67,3 +70,7 @@ class Restaurante:
         quantidade_nota=len(self._avaliacao)
         media=round(soma_nota/quantidade_nota, 1)
         return media
+    
+    def add_no_cardapio(self,item):
+        if isinstance(item,ItemCardapio):
+            self._cardapio.append(item)
