@@ -10,6 +10,7 @@ from modelos.restaurante import Restaurante
 from modelos.cardapio.bebida import Bebida
 from modelos.cardapio.prato import Prato
 from modelos.cardapio.sobremesa import Sobremesa
+
 restaurante_praca=Restaurante('Praça','Goumert')
 restaurante_mexicano=Restaurante('Mexican Food','Mexicana')
 restaurante_japones=Restaurante('Japa','Japonesa')
